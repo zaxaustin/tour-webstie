@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | NYC Holiday Magic Tours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <a class="branding" href="index.html">
+                <span class="snowflake" aria-hidden="true">❄️</span>
+                <span>NYC Holiday Magic Tours</span>
+            </a>
+            <nav aria-label="Primary">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="tour-builder.html">Tour Builder</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero page-hero">
+            <h1>Contact NYC Holiday Magic Tours</h1>
+            <p>Ready to book, customizing a route, or looking for insider tips? Send us your details and we&apos;ll reply within 24 hours.</p>
+            <div class="hero-actions">
+                <a class="button" href="#contactForm" data-scroll-target="#contactForm">Send a Message</a>
+                <a class="button secondary" href="tour-builder.html">Build Your Tour</a>
+            </div>
+        </section>
+
+        <section class="section light">
+            <div class="container contact-layout">
+                <div class="contact-card">
+                    <h3>Booking &amp; Support</h3>
+                    <ul>
+                        <li><strong>Email:</strong> hello@nycholidaymagic.com</li>
+                        <li><strong>Phone:</strong> (212) 555-1234</li>
+                        <li><strong>Hours:</strong> 9 AM &ndash; 7 PM ET, Monday &ndash; Saturday</li>
+                        <li><strong>Response:</strong> We reply to every inquiry within 24 hours</li>
+                    </ul>
+                    <div class="mt-1">
+                        <a class="button secondary" href="#guideModal" data-open-guide-modal>Download Self-Guided Tour</a>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-card" data-contact-form>
+                    <h3>Tell Us About Your Tour</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" placeholder="Your name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="tourType">Tour Type</label>
+                            <select id="tourType" name="tourType" required>
+                                <option value="private">Private Tour</option>
+                                <option value="group">Public Group Tour</option>
+                                <option value="self-guided">Self-Guided Download</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="numPeople">Number of Guests</label>
+                            <input id="numPeople" name="numPeople" type="number" min="1" max="20" value="2" />
+                        </div>
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="preferredDate">Preferred Date</label>
+                        <input id="preferredDate" name="preferredDate" type="date" />
+                    </div>
+                    <div class="form-group mt-1">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Share your wishlist, accessibility needs, or timeline."></textarea>
+                    </div>
+                    <div class="mt-1-5">
+                        <button type="submit" class="button">Send Message</button>
+                        <p class="text-muted mt-0-75">Need a quicker response? Call or text us between 9 AM and 7 PM ET.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container two-column">
+                <div>
+                    <h2>Why Guests Reach Out</h2>
+                    <ul class="feature-list" aria-label="Reasons guests contact us">
+                        <li>Confirm availability for private evening tours</li>
+                        <li>Join public group departures on Wednesday, Saturday, or Sunday</li>
+                        <li>Request pricing for corporate or multi-family celebrations</li>
+                        <li>Customize itineraries with theatre tickets and restaurant reservations</li>
+                        <li>Download our free self-guided trail for pre- or post-trip exploring</li>
+                    </ul>
+                </div>
+                <div class="cta-panel">
+                    <h3>After You Submit</h3>
+                    <p>We&apos;ll confirm your details, share payment options (Venmo, Zelle, cash, credit), and schedule a quick planning call if needed. Expect a warm, detailed reply no later than the next business day.</p>
+                    <div class="button-group mt-1">
+                        <a class="button" href="faq.html">Visit the FAQ</a>
+                        <a class="button secondary" href="tour-builder.html">Plan Your Route</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h4>NYC Holiday Magic Tours</h4>
+                <p>Creating sparkling memories from late November through early January.</p>
+                <ul class="footer-links">
+                    <li><strong>Season:</strong> Late November &ndash; Early January</li>
+                    <li><strong>Email:</strong> <a href="mailto:hello@nycholidaymagic.com">hello@nycholidaymagic.com</a></li>
+                    <li><strong>Phone:</strong> <a href="tel:+12125551234">(212) 555-1234</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Sitemap</h4>
+                <ul class="footer-sitemap" aria-label="Sitemap">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="tour-builder.html">Tour Builder</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Stay Festive</h4>
+                <p>Download the self-guided tour or join our newsletter for seasonal tips, theatre recommendations, and restaurant pairings.</p>
+                <div class="button-group justify-start">
+                    <a class="button secondary" href="#guideModal" data-open-guide-modal>Send Me the Guide</a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-note">Made with ❄️ in New York City &bull; Licensed NYC Guide #A12345</p>
+    </footer>
+
+    <div class="site-modal" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideModalTitle">
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Close" data-close-modal>&times;</button>
+            <h3 id="guideModalTitle">Free Self-Guided Holiday Tour</h3>
+            <p>Share your email and we&apos;ll send you our favorite DIY route featuring Fifth Avenue windows, Rockefeller Center, and sweet treat stops.</p>
+            <form>
+                <div class="form-group">
+                    <label for="guideName">Name</label>
+                    <input id="guideName" name="guideName" type="text" placeholder="Your name" />
+                </div>
+                <div class="form-group mt-1">
+                    <label for="guideEmail">Email</label>
+                    <input id="guideEmail" name="guideEmail" type="email" placeholder="you@example.com" required />
+                </div>
+                <div class="mt-1-5">
+                    <button type="submit" class="button">Send the Guide</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
