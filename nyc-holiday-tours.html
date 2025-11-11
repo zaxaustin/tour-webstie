@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="NYC Holiday Magic Tours offers private and group holiday tours with a licensed local guide, custom itineraries, and insider tips for the season's best lights and experiences.">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="favicon.svg">
-    <meta property="og:title" content="NYC Holiday Magic Tours - Private Guided Holiday Tours">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg">
+    <link rel="canonical" href="https://nycholidaymagictours.com/nyc-holiday-tours.html">
+    <meta property="og:title" content="NYC Holiday Magic Tours | NYC Holiday Tour Packages">
     <meta property="og:description" content="Experience the holidays in New York City with private and group tours led by a licensed guide. Explore iconic landmarks, festive lights, and hidden gems.">
     <meta property="og:type" content="LocalBusiness">
-    <meta property="og:url" content="https://nycholidaymagictours.com/">
+    <meta property="og:url" content="https://nycholidaymagictours.com/nyc-holiday-tours.html">
     <meta property="og:image" content="https://images.unsplash.com/photo-1549640376-195fd03d60ca?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NYC Holiday Magic Tours - Private Guided Holiday Tours">
+    <meta name="twitter:title" content="NYC Holiday Magic Tours | NYC Holiday Tour Packages">
     <meta name="twitter:description" content="Book custom NYC holiday tours with a licensed local guide and discover the city's most magical seasonal moments.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1549640376-195fd03d60ca?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
     <meta name="theme-color" content="#165b33">
-    <title>NYC Holiday Magic Tours - Private Guided Holiday Tours</title>
+    <title>NYC Holiday Magic Tours | NYC Holiday Tour Packages</title>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -2240,6 +2240,27 @@
 
         function scrollToForm() {
             document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function bookGroupTour(day) {
+            const dayLabels = {
+                saturday: 'Saturday evening',
+                wednesday: 'Wednesday evening',
+                sunday: 'Sunday afternoon'
+            };
+
+            const tourTypeField = document.getElementById('tourType');
+            if (tourTypeField) {
+                tourTypeField.value = 'group';
+            }
+
+            const desiredField = document.getElementById('desiredLocations');
+            if (desiredField) {
+                const label = dayLabels[day] || day;
+                desiredField.value = `Interested in the ${label} group holiday tour.`;
+            }
+
+            scrollToForm();
         }
 
         function handleSubmit(e) {
