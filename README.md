@@ -60,6 +60,74 @@ NYC Holiday Magic Tours is a professional tour business offering private and gro
 3. Select `main` branch as source
 4. Your site will be live at `https://yourusername.github.io/nyc-holiday-tours`
 
+### ✅ Deployment Checklist
+
+Run through this quick list before sharing your production link:
+
+- [ ] Replace placeholder business details (phone, email, meeting points) in `index.html` and structured data.
+- [ ] Update the Open Graph image URL and confirm it passes the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/).
+- [ ] Verify the booking form is connected to your form provider (Formspree, Netlify Forms, etc.) and displays a success message.
+- [ ] Test critical paths with keyboard only and screen-reader navigation to confirm skip links, menu toggles, and FAQ accordions work.
+- [ ] Confirm the responsive layout on common breakpoints (320px, 768px, 1024px, 1440px).
+- [ ] Check that favicons appear on desktop and mobile browsers.
+- [ ] Validate HTML/CSS with [W3C tools](https://validator.w3.org/) and fix warnings that impact production quality.
+- [ ] If you use analytics or pixels, add the scripts just before `</body>` and verify consent messaging if required.
+
+### 🌐 Hosting configuration tips
+
+**Netlify**
+
+Create a `netlify.toml` in the project root to control redirects and security headers:
+
+```toml
+[build]
+  command = ""
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/favicon.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+```
+
+Netlify auto-detects form submissions if you add `netlify` attributes to your form, or you can connect your existing provider.
+
+**Vercel**
+
+Add a lightweight `vercel.json` to mirror the same behavior:
+
+```json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
+```
+
+You can manage environment variables for third-party services (Formspree IDs, analytics keys) directly in the Vercel dashboard without exposing them in the codebase.
+
 ### Booking System Setup
 
 #### Requirements

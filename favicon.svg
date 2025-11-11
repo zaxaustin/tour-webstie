@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">NYC Holiday Magic Tours favicon</title>
+  <desc id="desc">A golden circle with a green snowflake inside.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ffb347"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#grad)" stroke="#2c3e50" stroke-width="2"/>
+  <path fill="#165b33" d="M32 12l3 8 7-3-4 7 8 3-8 3 4 7-7-3-3 8-3-8-7 3 4-7-8-3 8-3-4-7 7 3z"/>
+</svg>
