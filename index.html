@@ -140,16 +140,58 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-grid">
-            <div>
-                <h4>NYC Holiday Magic Tours</h4>
-                <p>Creating sparkling memories from late November through early January.</p>
-                <ul class="footer-links">
-                    <li><strong>Season:</strong> Late November &ndash; Early January</li>
-                    <li><strong>Email:</strong> <a href="mailto:hello@nycholidaymagic.com">hello@nycholidaymagic.com</a></li>
-                    <li><strong>Phone:</strong> <a href="tel:+12125551234">(212) 555-1234</a></li>
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+        <div class="section">
+            <h2 id="about-heading">Meet Dina, Your Licensed NYC Guide</h2>
+            <div class="about-content">
+                <p class="about-intro">
+                    Dina Capobianco has spent more than 15 years helping families, friend groups, and first-time visitors fall in love with New York City’s holiday season. As a lifelong New Yorker and fully licensed guide, she brings insider stories, calm crowd navigation, and plenty of warm hospitality to every tour.
+                </p>
+                <ul class="about-highlights">
+                    <li>
+                        <strong>Licensed &amp; insured</strong>
+                        NYC Department of Consumer and Worker Protection licensed guide with complete liability coverage for your peace of mind.
+                    </li>
+                    <li>
+                        <strong>Story-driven experiences</strong>
+                        Hear the history behind famous window displays, traditions, and neighborhoods while discovering hidden photo spots.
+                    </li>
+                    <li>
+                        <strong>Inclusive itineraries</strong>
+                        Accessible pacing, stroller-friendly routes, and custom rest stops ensure everyone in your party feels comfortable.
+                    </li>
+                    <li>
+                        <strong>Seasonal expertise</strong>
+                        Get up-to-the-minute tips on crowd levels, best viewing times, and the newest installations across the five boroughs.
+                    </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="free-guide-section">
+        <div class="section">
+            <h2>🎁 Free Self-Guided Holiday Tour Map 🎁</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                We believe everyone deserves to experience NYC holiday magic! Download our free guide with walking routes, insider tips, and hidden gems.
+            </p>
+            <div class="guide-cards">
+                <div class="guide-card">
+                    <h3>📍 Complete Walking Map</h3>
+                    <p>Optimized routes connecting all major holiday displays, with estimated walking times and subway directions.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>💡 Insider Tips</h3>
+                    <p>Best times to visit each location, free activities, public restrooms, and where to warm up with hot chocolate.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>📸 Photo Spots</h3>
+                    <p>Exact locations for the best photos, including angles professional photographers use.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>🎄 Hidden Gems</h3>
+                    <p>Lesser-known displays and decorations that locals love but tourists often miss.</p>
+                </div>
             </div>
             <div>
                 <h4>Sitemap</h4>
@@ -193,5 +235,498 @@
             </form>
         </div>
     </div>
+    </section>
+
+    <section class="contact-section section" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Book Your Holiday Tour</h2>
+        <p style="margin-bottom: 2rem; font-size: 1.1rem;">Tours available from late November through early January. Reserve your spot today!</p>
+        <form class="contact-form" onsubmit="handleSubmit(event)" aria-labelledby="contact-heading">
+            <div class="form-group">
+                <label for="customerName">Your Name *</label>
+                <input type="text" id="customerName" name="customerName" required placeholder="Enter your name" autocomplete="name">
+            </div>
+            <div class="form-group">
+                <label for="customerEmail">Email *</label>
+                <input type="email" id="customerEmail" name="customerEmail" required placeholder="your@email.com" autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label for="customerPhone">Phone Number *</label>
+                <input type="tel" id="customerPhone" name="customerPhone" required placeholder="(555) 123-4567" autocomplete="tel" inputmode="tel">
+            </div>
+            <div class="form-group">
+                <label for="tourType">Tour Type *</label>
+                <select id="tourType" name="tourType" required>
+                    <option value="">-- Select Tour Type --</option>
+                    <option value="private">Private Tour ($60-75/hour)</option>
+                    <option value="group">Public Group Tour ($10/hour per person)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="preferredDate">Preferred Date</label>
+                <input type="date" id="preferredDate" name="preferredDate">
+            </div>
+            <div class="form-group">
+                <label for="tourTime">Tour Time Preference</label>
+                <select id="tourTime" name="tourTime">
+                    <option>Day Tour (10am - 2pm)</option>
+                    <option>Afternoon Tour (2pm - 6pm)</option>
+                    <option>Evening Tour (6pm - 9pm)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numPeople">Number of People</label>
+                <input type="number" id="numPeople" name="numPeople" min="1" max="15" value="4" placeholder="Number of guests" inputmode="numeric">
+            </div>
+            <div class="form-group">
+                <label for="desiredLocations">Desired Locations/Neighborhoods</label>
+                <textarea id="desiredLocations" name="desiredLocations" placeholder="Which places would you like to visit? (e.g., Rockefeller, Central Park, Brooklyn Bridge, Chinatown, etc.)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="specialRequests">Special Requests or Questions</label>
+                <textarea id="specialRequests" name="specialRequests" placeholder="Any special needs, interests, or questions?"></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Booking Request</button>
+        </form>
+    </section>
+
+    <section class="faq-section">
+        <div class="section">
+            <h2>❓ Frequently Asked Questions ❓</h2>
+            
+            <div class="faq-container" role="list">
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span class="question-text">What if it rains or snows?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1" hidden>
+                        <p>Our tours run rain or shine! We'll provide tips for staying comfortable in any weather. If there's severe weather (heavy storms, blizzards), we'll work with you to reschedule at no extra charge. Much of our tour includes indoor locations and covered areas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span class="question-text">Are the tours suitable for young children?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2" hidden>
+                        <p>Absolutely! Our private tours are very family-friendly and can be customized for children of all ages. We include plenty of breaks, adjust the pace to your family's needs, and know all the best spots for snacks and restrooms. Strollers are welcome!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span class="question-text">How much walking is involved?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3" hidden>
+                        <p>The Saturday Grand Tour involves about 2-3 miles of walking over 4.5 hours at a relaxed pace with breaks. Private tours can be adjusted to your comfort level, and we can incorporate subway rides or taxis to reduce walking. Comfortable shoes are highly recommended!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+                        <span class="question-text">What's your cancellation policy?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4" hidden>
+                        <p><strong>Private Tours:</strong> Free cancellation up to 48 hours before your tour. Within 48 hours we offer a 50% refund, and same-day cancellations are non-refundable unless due to emergency.</p>
+                        <p><strong>Group Tours:</strong> Full refund if cancelled 7+ days before. 50% refund if cancelled 3-6 days before. No refunds within 48 hours of the tour date.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+                        <span class="question-text">Do we need to pay for your transportation?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5" hidden>
+                        <p>Guide transportation is included in your tour price. If your tour involves subway travel for the group, guests pay their own fares ($2.90 per ride). We recommend unlimited MetroCards if you plan multiple trips.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+                        <span class="question-text">What about meals during the tour?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-6" hidden>
+                        <p>Tours under four hours typically do not require a meal break. For private tours lasting four hours or more, we ask that you provide lunch for your guide (or invite them to join you). We're happy to recommend delicious options along the route.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7">
+                        <span class="question-text">Can we customize a private tour?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-7" hidden>
+                        <p>Yes! Want to focus on photography, avoid crowds, or add a neighborhood not listed? We'll work with you to create a custom NYC holiday experience. Share your wish list in the booking form and we'll build the perfect itinerary.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-8">
+                        <span class="question-text">Is gratuity expected?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-8" hidden>
+                        <p>Gratuity is never required but is always appreciated for exceptional service. Standard gratuities range from 15-20% if you feel your guide went above and beyond.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-9">
+                        <span class="question-text">What happens if the group tour doesn't meet the minimum?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-9" hidden>
+                        <p>We need at least ten guests for group tours to run. We'll notify you 48 hours in advance if we haven't met the minimum. You'll receive a full refund, or we can move your booking to another date or offer a discounted private tour.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-10">
+                        <span class="question-text">Are you really licensed?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-10" hidden>
+                        <p>Yes! We are fully licensed and insured NYC tour guides. You receive authentic, accurate storytelling from experienced local professionals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-11">
+                        <span class="question-text">What should we bring?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-11" hidden>
+                        <ul>
+                            <li><strong>Essentials:</strong> Comfortable walking shoes, layers for the weather, phone or camera, and water.</li>
+                            <li><strong>Recommended:</strong> Hand warmers, portable charger, snacks, small backpack, and an umbrella.</li>
+                            <li><strong>Winter extras:</strong> Warm coat, gloves, hat, and scarf&mdash;NYC gets chilly!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" role="listitem">
+                    <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-12">
+                        <span class="question-text">Can we book a tour in other seasons?</span>
+                        <span class="faq-icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-12" hidden>
+                        <p>We specialize in holiday tours from late November through early January, but we're exploring year-round offerings. Reach out with your travel dates and interests&mdash;we're happy to discuss a custom tour.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NYC Holiday Magic Tours. Fully licensed and insured.</p>
+        <p style="margin-top: 1rem;">Making holiday memories one tour at a time ❄️🎄✨</p>
+    </footer>
+
+    <!-- Guide Download Modal -->
+    <div class="modal" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideModalTitle" aria-describedby="guideModalDescription" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" type="button" aria-label="Close guide signup" onclick="closeGuideModal()">&times;</button>
+            <h2 id="guideModalTitle" style="color: #c41e3a; text-align: center;">📍 Your Free NYC Holiday Guide</h2>
+            <p id="guideModalDescription" style="text-align: center; margin-bottom: 2rem;">Enter your email to receive the complete guide with maps, tips, and hidden gems!</p>
+            
+            <div class="guide-preview">
+                <h4>What's Included:</h4>
+                <ul>
+                    <li>Detailed walking maps with 3 different routes (2-hour, 4-hour, and full-day)</li>
+                    <li>Best photo spots with exact addresses and optimal times</li>
+                    <li>Free activities and attractions along each route</li>
+                    <li>Budget-friendly food recommendations ($5-15 per person)</li>
+                    <li>Public restroom locations (a parent's best friend!)</li>
+                    <li>Subway directions and walking times between locations</li>
+                    <li>Secret viewing spots locals use to avoid crowds</li>
+                    <li>Historical facts and stories to share with your family</li>
+                    <li>Accessibility information for strollers and wheelchairs</li>
+                    <li>Weather tips and what to bring checklist</li>
+                </ul>
+            </div>
+
+            <form onsubmit="handleGuideDownload(event)" class="modal-form">
+                <label for="guideEmail" class="modal-label">Email Address *</label>
+                <input type="email" id="guideEmail" name="guideEmail" placeholder="your@email.com" required autocomplete="email" class="modal-input">
+                <label for="guideOptIn" class="modal-checkbox">
+                    <input type="checkbox" id="guideOptIn" name="guideOptIn" required>
+                    I'd like to receive occasional tips and updates (no spam, unsubscribe anytime)
+                </label>
+                <button type="submit" class="cta-button">Send Me The Free Guide!</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const primaryNavLinks = document.querySelectorAll('#primary-navigation a');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('is-open');
+                menuToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            const mq = window.matchMedia('(min-width: 769px)');
+            const closeMenu = () => {
+                navLinks.classList.remove('is-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            };
+
+            mq.addEventListener('change', (event) => {
+                if (event.matches) {
+                    closeMenu();
+                }
+            });
+
+            primaryNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('is-open')) {
+                        closeMenu();
+                    }
+                });
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && navLinks.classList.contains('is-open')) {
+                    closeMenu();
+                    menuToggle.focus();
+                }
+            });
+        }
+
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const expanded = question.getAttribute('aria-expanded') === 'true';
+                const answerId = question.getAttribute('aria-controls');
+                const answer = document.getElementById(answerId);
+                const faqItem = question.closest('.faq-item');
+                question.setAttribute('aria-expanded', String(!expanded));
+                if (faqItem) {
+                    faqItem.classList.toggle('active', !expanded);
+                }
+                if (answer) {
+                    if (expanded) {
+                        answer.setAttribute('hidden', '');
+                    } else {
+                        answer.removeAttribute('hidden');
+                    }
+                }
+                const icon = question.querySelector('.faq-icon');
+                if (icon) {
+                    icon.textContent = expanded ? '+' : '−';
+                }
+            });
+        });
+
+        const guideModal = document.getElementById('guideModal');
+        const guideModalEmail = guideModal ? guideModal.querySelector('input[type="email"]') : null;
+        let lastFocusedElement = null;
+
+        let selectedLocations = [];
+        const locationTimes = {
+            'Lincoln Center': 35,
+            'Rockefeller Center': 37.5,
+            'Fifth Avenue': 37.5,
+            'Bryant Park': 37.5,
+            "Macy's Herald Square": 40,
+            'Times Square': 25,
+            'Grand Central': 35,
+            'Brooklyn Bridge': 67.5,
+            'Chinatown': 37.5,
+            'Wall Street': 37.5,
+            '9/11 Memorial': 37.5,
+            'Statue of Liberty Views': 25
+        };
+
+        function updateTourEstimate() {
+            const checkboxes = document.querySelectorAll('.location-checkbox input:checked');
+            selectedLocations = Array.from(checkboxes).map(cb => cb.value);
+            
+            const selectedList = document.getElementById('selectedLocations');
+            const estimateDetails = document.getElementById('estimateDetails');
+            
+            if (selectedLocations.length === 0) {
+                selectedList.innerHTML = '<p style="color: #999; font-style: italic;">Select locations to see your custom tour details</p>';
+                estimateDetails.style.display = 'none';
+                return;
+            }
+            
+            // Display selected locations
+            selectedList.innerHTML = selectedLocations.map(loc => {
+                const minutes = locationTimes[loc] ?? 30;
+                return `<div class="selected-item">
+                    <span>${loc}</span>
+                    <span style="color: #999; font-size: 0.9rem;">${Math.round(minutes)} min</span>
+                </div>`;
+            }).join('');
+
+            // Calculate total time
+            let totalMinutes = selectedLocations.reduce((sum, loc) => sum + (locationTimes[loc] ?? 30), 0);
+            // Add 15 minutes travel time between each location
+            totalMinutes += (selectedLocations.length - 1) * 15;
+            
+            const hours = Math.ceil(totalMinutes / 60);
+            const displayHours = totalMinutes < 60 ? 
+                `${Math.round(totalMinutes)} minutes` : 
+                `${Math.floor(totalMinutes / 60)}-${Math.ceil(totalMinutes / 60)} hours`;
+            
+            // Calculate cost
+            const minCost = hours * 60;
+            const maxCost = hours * 75;
+            
+            // Update display
+            document.getElementById('estimatedTime').textContent = displayHours;
+            document.getElementById('estimatedCost').textContent = `${minCost}-${maxCost}`;
+            
+            // Show/hide lunch note
+            const lunchNote = document.getElementById('lunchNote');
+            lunchNote.style.display = hours >= 4 ? 'block' : 'none';
+            
+            estimateDetails.style.display = 'block';
+        }
+
+        function proceedWithCustomTour() {
+            if (selectedLocations.length === 0) {
+                alert('Please select at least one location for your tour!');
+                return;
+            }
+            
+            // Pre-fill the contact form with selected locations
+            document.getElementById('desiredLocations').value = selectedLocations.join(', ');
+            document.getElementById('tourType').value = 'private';
+            
+            scrollToForm();
+        }
+
+        function scrollToCustomizer() {
+            document.querySelector('.tour-customizer-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function scrollToForm() {
+            document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function bookGroupTour(day) {
+            const dayLabels = {
+                saturday: 'Saturday evening',
+                wednesday: 'Wednesday evening',
+                sunday: 'Sunday afternoon'
+            };
+
+            const tourTypeField = document.getElementById('tourType');
+            if (tourTypeField) {
+                tourTypeField.value = 'group';
+            }
+
+            const desiredField = document.getElementById('desiredLocations');
+            if (desiredField) {
+                const label = dayLabels[day] || day;
+                desiredField.value = `Interested in the ${label} group holiday tour.`;
+            }
+
+            scrollToForm();
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            const tourType = document.getElementById('tourType').value;
+            const numPeople = document.getElementById('numPeople').value;
+            
+            let message = 'Thank you for your booking request! ';
+            
+            if (tourType === 'group') {
+                message += 'We will contact you within 24 hours with available group tour dates and confirm your spot.';
+            } else {
+                message += 'We will contact you within 24 hours to confirm your tour details, finalize your itinerary, and answer any questions.';
+            }
+            
+            alert(message);
+        }
+
+        function showGuideModal() {
+            if (!guideModal) {
+                return;
+            }
+            lastFocusedElement = document.activeElement;
+            guideModal.classList.add('active');
+            guideModal.removeAttribute('aria-hidden');
+            document.body.classList.add('modal-open');
+            if (guideModalEmail) {
+                guideModalEmail.focus();
+            }
+        }
+
+        function closeGuideModal() {
+            if (!guideModal) {
+                return;
+            }
+            guideModal.classList.remove('active');
+            guideModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+            if (lastFocusedElement && document.body.contains(lastFocusedElement)) {
+                lastFocusedElement.focus();
+            }
+        }
+
+        function handleGuideDownload(e) {
+            e.preventDefault();
+            alert('Thank you! Check your email for your free NYC Holiday Tour Guide. Be sure to check your spam folder if you don\'t see it within a few minutes!');
+            closeGuideModal();
+        }
+
+        // Close modal when clicking outside
+        if (guideModal) {
+            guideModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeGuideModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && guideModal && guideModal.classList.contains('active')) {
+                closeGuideModal();
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            if (anchor.classList.contains('skip-link')) {
+                return;
+            }
+
+            anchor.addEventListener('click', (event) => {
+                const targetSelector = anchor.getAttribute('href');
+                if (!targetSelector || targetSelector === '#') {
+                    return;
+                }
+
+                const target = document.querySelector(targetSelector);
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                const hadTabIndex = target.hasAttribute('tabindex');
+                if (!hadTabIndex) {
+                    target.setAttribute('tabindex', '-1');
+                    target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+                }
+                target.focus({ preventScroll: true });
+            });
+        });
+    </script>
 </body>
 </html>
